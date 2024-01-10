@@ -2,8 +2,6 @@ import app as mongo
 from routes.texts import router as text_router
 from routes.users import router as user_router
 from routes.audit import router as audit_router
-from data import text_1, text_2, text_3, text_4, text_5
-from pandas import DataFrame
 from fastapi import FastAPI
 
 
