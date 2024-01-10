@@ -11,7 +11,7 @@ app = FastAPI()
 @app.on_event("startup")
 def startup_db_client():
     app.mongodb_client = mongo.get_client()
-    app.database = app.mongodb_client.test
+    app.database = app.mongodb_client[mongo.get_database()]
     print("Connected to the database!")
 
 
